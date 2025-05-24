@@ -12,7 +12,10 @@ const Stack = createNativeStackNavigator<RootStackParamList>();
 export default function StackApp() {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="Register">
+            <Stack.Navigator initialRouteName="Register" screenOptions={{
+                headerShown: false,
+                animation: 'slide_from_bottom',
+            }}>
                 <Stack.Screen name="Register" component={RegisterScreen} />
             </Stack.Navigator>
         </NavigationContainer>
