@@ -44,7 +44,7 @@ const RegisterScreen: React.FC = () => {
                     {/* Imagen de fondo - Lado izquierdo */}
                     <View style={styles.imageContainer}>
                         <ImageBackground
-                            source={{ uri: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=800&fit=crop&auto=format' }}
+                            source={require('../assets/registerImage.png')}
                             style={styles.backgroundImage}
                             resizeMode="cover"
                         >
@@ -268,7 +268,7 @@ const styles = StyleSheet.create({
         color: '#333333',
     },
     textInput: {
-        backgroundColor: '#FFB347',
+        backgroundColor: '#FFB81C',
         borderRadius: 8,
         paddingHorizontal: 16,
         paddingVertical: height * 0.018,
@@ -277,7 +277,7 @@ const styles = StyleSheet.create({
         borderWidth: 0,
     },
     pickerContainer: {
-        backgroundColor: '#FFB347',
+        backgroundColor: '#FFB81C',
         borderRadius: 8,
         overflow: 'hidden',
         marginTop: 4,
@@ -297,7 +297,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 2,
     },
     experienceButtonSelected: {
-        backgroundColor: '#FFB347',
+        backgroundColor: '#FFB81C',
     },
     experienceButtonText: {
         fontSize: width * 0.02,
@@ -349,7 +349,7 @@ const modalStyles = StyleSheet.create({
         marginTop: 12,
     },
     cancelText: {
-        color: '#FFB347',
+        color: '#FFB81C',
         textAlign: 'center',
         fontWeight: 'bold',
     },
