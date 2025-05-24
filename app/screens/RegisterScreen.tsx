@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StatusBar, StyleSheet, ImageBackground, Dimensions } from 'react-native';
+import { View, StatusBar, StyleSheet, ImageBackground } from 'react-native';
 import RegisterForm from '../components/register/RegisterForm';
 import Colors from '../utils/Colors';
 
