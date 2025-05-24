@@ -40,11 +40,6 @@ const RegisterScreen: React.FC = () => {
         <>
             <StatusBar backgroundColor="#E8E8E8" barStyle="dark-content" />
             <View style={styles.container}>
-                {/* Título */}
-                <View style={styles.titleContainer}>
-                    <Text style={styles.title}>Registro</Text>
-                </View>
-
                 <View style={styles.mainContent}>
                     {/* Imagen de fondo - Lado izquierdo */}
                     <View style={styles.imageContainer}>
@@ -59,6 +54,8 @@ const RegisterScreen: React.FC = () => {
 
                     {/* Formulario - Lado derecho */}
                     <View style={styles.formContainer}>
+                        {/* Título arriba del formulario */}
+                        <Text style={styles.title}>Registro</Text>
                         <ScrollView
                             showsVerticalScrollIndicator={false}
                             contentContainerStyle={styles.formContent}
@@ -213,46 +210,45 @@ const RegisterScreen: React.FC = () => {
 
 const { width, height } = Dimensions.get('window');
 
+// Ajusta los estilos
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#E8E8E8',
-    },
-    titleContainer: {
-        paddingTop: height * 0.05,
-        paddingBottom: height * 0.03,
-        paddingHorizontal: width * 0.05,
-    },
-    title: {
-        fontSize: width * 0.045,
-        fontWeight: '700',
-        color: '#333333',
-        textAlign: 'center',
     },
     mainContent: {
         flex: 1,
         flexDirection: 'row',
     },
     imageContainer: {
-        flex: 0.5,
+        flex: 1,
         height: '100%',
     },
     backgroundImage: {
         flex: 1,
         width: '100%',
         height: '100%',
+        justifyContent: 'flex-end',
     },
     imageOverlay: {
-        flex: 1,
+        ...StyleSheet.absoluteFillObject,
         backgroundColor: 'rgba(0, 0, 0, 0.2)',
     },
     formContainer: {
-        flex: 0.5,
+        flex: 1,
         backgroundColor: '#E8E8E8',
         paddingHorizontal: width * 0.04,
+        justifyContent: 'center',
+    },
+    title: {
+        fontSize: width * 0.035,
+        fontWeight: '700',
+        color: '#333333',
+        textAlign: 'center',
+        marginBottom: height * 0.02,
+        marginTop: height * 0.01,
     },
     formContent: {
-        paddingTop: height * 0.03,
         paddingBottom: height * 0.05,
     },
     inputGroup: {
