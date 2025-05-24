@@ -62,7 +62,7 @@ const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F3E7',
+        backgroundColor: Colors.Background,
         paddingHorizontal: width * 0.08,
         paddingVertical: height * 0.05,
     },
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: width * 0.045,
         fontWeight: '600',
-        color: '#333333',
+        color: Colors.Black,
         textAlign: 'center',
         letterSpacing: 1,
     },
