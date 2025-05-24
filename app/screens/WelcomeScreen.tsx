@@ -9,6 +9,7 @@ import {
     Image,
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Colors from '../utils/Colors';
 
 interface WelcomeScreenProps { }
 
@@ -94,14 +95,14 @@ const styles = StyleSheet.create({
         marginBottom: height * 0.03,
     },
     startButton: {
-        backgroundColor: '#FFB81C',
+        backgroundColor: Colors.PrimaryYellow,
         paddingHorizontal: width * 0.08,
         paddingVertical: height * 0.02,
         borderRadius: 12,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        shadowColor: '#000',
+        shadowColor: Colors.Black,
         shadowOffset: {
             width: 0,
             height: 4,
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
     buttonText: {
         fontSize: width * 0.025,
         fontWeight: '600',
-        color: '#333333',
+        color: Colors.Black,
         marginRight: 0,
     },
 });

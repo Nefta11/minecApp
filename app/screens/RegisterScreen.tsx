@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, Dimensions, StatusBar, TouchableOpacity, TextInput, ImageBackground, ScrollView, Modal, Pressable } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import Colors from '../utils/Colors';
 
 interface RegisterFormData {
     fullName: string;
@@ -214,7 +215,7 @@ const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#E8E8E8',
+        backgroundColor: Colors.White,
     },
     mainContent: {
         flex: 1,
@@ -236,14 +237,14 @@ const styles = StyleSheet.create({
     },
     formContainer: {
         flex: 1,
-        backgroundColor: '#E8E8E8',
+        backgroundColor: Colors.White,
         paddingHorizontal: width * 0.04,
         justifyContent: 'center',
     },
     title: {
         fontSize: width * 0.035,
         fontWeight: '700',
-        color: '#333333',
+        color: Colors.Black,
         textAlign: 'center',
         marginBottom: height * 0.02,
         marginTop: height * 0.01,
@@ -265,19 +266,19 @@ const styles = StyleSheet.create({
     label: {
         fontSize: width * 0.024,
         fontWeight: '600',
-        color: '#333333',
+        color: Colors.Black,
     },
     textInput: {
-        backgroundColor: '#FFB81C',
+        backgroundColor: Colors.PrimaryYellow,
         borderRadius: 8,
         paddingHorizontal: 16,
         paddingVertical: height * 0.018,
         fontSize: width * 0.022,
-        color: '#333',
+        color: Colors.Black,
         borderWidth: 0,
     },
     pickerContainer: {
-        backgroundColor: '#FFB81C',
+        backgroundColor: Colors.PrimaryYellow,
         borderRadius: 8,
         overflow: 'hidden',
         marginTop: 4,
@@ -289,7 +290,7 @@ const styles = StyleSheet.create({
     },
     experienceButton: {
         flex: 1,
-        backgroundColor: '#6B7280',
+        backgroundColor: Colors.DavysGrey,
         borderRadius: 8,
         paddingVertical: height * 0.015,
         alignItems: 'center',
@@ -297,18 +298,18 @@ const styles = StyleSheet.create({
         marginHorizontal: 2,
     },
     experienceButtonSelected: {
-        backgroundColor: '#FFB81C',
+        backgroundColor: Colors.PrimaryYellow,
     },
     experienceButtonText: {
         fontSize: width * 0.02,
         fontWeight: '600',
-        color: '#FFFFFF',
+        color: Colors.White,
     },
     experienceButtonTextSelected: {
-        color: '#333333',
+        color: Colors.Black,
     },
     registerButton: {
-        backgroundColor: '#6B7280',
+        backgroundColor: Colors.DavysGrey,
         borderRadius: 8,
         paddingVertical: height * 0.02,
         alignItems: 'center',
@@ -320,7 +321,7 @@ const styles = StyleSheet.create({
     registerButtonText: {
         fontSize: width * 0.025,
         fontWeight: '600',
-        color: '#FFFFFF',
+        color: Colors.White,
     },
 });
 
@@ -349,7 +350,7 @@ const modalStyles = StyleSheet.create({
         marginTop: 12,
     },
     cancelText: {
-        color: '#FFB81C',
+        color: Colors.PrimaryYellow,
         textAlign: 'center',
         fontWeight: 'bold',
     },
