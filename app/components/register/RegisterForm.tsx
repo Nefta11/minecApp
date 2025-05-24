@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Dimensions, TouchableOpacity, TextInput, ScrollView, Modal, Pressable } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Colors from '../../utils/Colors';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
 
 interface RegisterFormData {
     fullName: string;
@@ -17,7 +18,13 @@ const locationOptions = [
     { label: 'Centro de Operaciones Oeste', value: 'oeste' },
 ];
 
+type RootStackParamList = {
+    Home: undefined;
+    // add other routes here if needed
+};
+
 const RegisterForm: React.FC = () => {
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const [formData, setFormData] = useState<RegisterFormData>({
         fullName: '',
         age: '',
@@ -28,7 +35,7 @@ const RegisterForm: React.FC = () => {
 
     const handleRegister = () => {
         console.log('Datos del formulario:', formData);
-        // Aquí ira la logica para manejar el registro
+        navigation.navigate('Home');
     };
 
     const handleExperienceLevelSelect = (level: RegisterFormData['experienceLevel']) => {
