@@ -6554,6 +6554,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.511.0":
+  version: 0.511.0
+  resolution: "lucide-react@npm:0.511.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10/d712f4215a2e2563e145a6946f0e2be2cf6a081ac52d832e521996ba1c1fda91881445a4e78affa0bde520b3ad9f25ff83b8097f9baf2e192ce8f732d78e1402
+  languageName: node
+  linkType: hard
+
 "make-dir@npm:^4.0.0":
   version: 4.0.0
   resolution: "make-dir@npm:4.0.0"
@@ -6939,6 +6948,7 @@ __metadata:
     "@types/react-test-renderer": "npm:^19.0.0"
     eslint: "npm:^8.19.0"
     jest: "npm:^29.6.3"
+    lucide-react: "npm:^0.511.0"
     minecapp: "file:"
     prettier: "npm:2.8.8"
     react: "npm:19.0.0"

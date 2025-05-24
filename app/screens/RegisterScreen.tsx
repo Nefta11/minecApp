@@ -1,17 +1,6 @@
 import React, { useState } from 'react';
-import {
-    View,
-    Text,
-    StyleSheet,
-    Dimensions,
-    StatusBar,
-    TouchableOpacity,
-    TextInput,
-    ImageBackground,
-    ScrollView,
-} from 'react-native';
+import { View, Text, StyleSheet, Dimensions, StatusBar, TouchableOpacity, TextInput, ImageBackground, ScrollView, Modal, Pressable } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Picker } from '@react-native-picker/picker';
 
 interface RegisterFormData {
     fullName: string;
@@ -27,7 +16,14 @@ const RegisterScreen: React.FC = () => {
         location: '',
         experienceLevel: '',
     });
+    const [locationModalVisible, setLocationModalVisible] = useState(false);
 
+    const locationOptions = [
+        { label: 'Centro de Operaciones Norte', value: 'norte' },
+        { label: 'Centro de Operaciones Sur', value: 'sur' },
+        { label: 'Centro de Operaciones Este', value: 'este' },
+        { label: 'Centro de Operaciones Oeste', value: 'oeste' },
+    ];
 
     const handleRegister = () => {
         console.log('Datos del formulario:', formData);
@@ -37,6 +33,8 @@ const RegisterScreen: React.FC = () => {
     const handleExperienceLevelSelect = (level: RegisterFormData['experienceLevel']) => {
         setFormData(prev => ({ ...prev, experienceLevel: level }));
     };
+
+    const getLocationTextColor = (location: string) => (location ? '#333' : '#999');
 
     return (
         <>
@@ -51,9 +49,7 @@ const RegisterScreen: React.FC = () => {
                     {/* Imagen de fondo - Lado izquierdo */}
                     <View style={styles.imageContainer}>
                         <ImageBackground
-                            source={{
-                                uri: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=800&fit=crop&auto=format'
-                            }}
+                            source={{ uri: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&h=800&fit=crop&auto=format' }}
                             style={styles.backgroundImage}
                             resizeMode="cover"
                         >
@@ -104,22 +100,45 @@ const RegisterScreen: React.FC = () => {
                                     <Icon name="location-on" size={20} color="#666" style={styles.labelIcon} />
                                     <Text style={styles.label}>Centro/ubicación</Text>
                                 </View>
-                                <View style={styles.pickerContainer}>
-                                    <Picker
-                                        selectedValue={formData.location}
-                                        style={styles.picker}
-                                        onValueChange={(itemValue) =>
-                                            setFormData(prev => ({ ...prev, location: itemValue }))
-                                        }
-                                        dropdownIconColor="#999"
-                                    >
-                                        <Picker.Item label="Selecciona" value="" />
-                                        <Picker.Item label="Centro de Operaciones Norte" value="norte" />
-                                        <Picker.Item label="Centro de Operaciones Sur" value="sur" />
-                                        <Picker.Item label="Centro de Operaciones Este" value="este" />
-                                        <Picker.Item label="Centro de Operaciones Oeste" value="oeste" />
-                                    </Picker>
-                                </View>
+                                <Pressable
+                                    style={styles.pickerContainer}
+                                    onPress={() => setLocationModalVisible(true)}
+                                >
+                                    <View style={rowBetween.container}>
+                                        <Text style={[styles.textInput, rowBetween.text, { color: getLocationTextColor(formData.location) }]}>
+                                            {formData.location
+                                                ? locationOptions.find(opt => opt.value === formData.location)?.label
+                                                : 'Selecciona'}
+                                        </Text>
+                                        <Icon name="arrow-drop-down" size={24} color="#666" />
+                                    </View>
+                                </Pressable>
+                                <Modal
+                                    visible={locationModalVisible}
+                                    transparent
+                                    animationType="fade"
+                                    onRequestClose={() => setLocationModalVisible(false)}
+                                >
+                                    <View style={modalStyles.overlay}>
+                                        <View style={modalStyles.modalBox}>
+                                            {locationOptions.map(option => (
+                                                <TouchableOpacity
+                                                    key={option.value}
+                                                    style={modalStyles.optionButton}
+                                                    onPress={() => {
+                                                        setFormData(prev => ({ ...prev, location: option.value }));
+                                                        setLocationModalVisible(false);
+                                                    }}
+                                                >
+                                                    <Text style={modalStyles.optionText}>{option.label}</Text>
+                                                </TouchableOpacity>
+                                            ))}
+                                            <TouchableOpacity onPress={() => setLocationModalVisible(false)} style={modalStyles.cancelButton}>
+                                                <Text style={modalStyles.cancelText}>Cancelar</Text>
+                                            </TouchableOpacity>
+                                        </View>
+                                    </View>
+                                </Modal>
                             </View>
 
                             {/* Nivel de experiencia */}
@@ -132,13 +151,13 @@ const RegisterScreen: React.FC = () => {
                                     <TouchableOpacity
                                         style={[
                                             styles.experienceButton,
-                                            formData.experienceLevel === 'Principiante' && styles.experienceButtonSelected
+                                            formData.experienceLevel === 'Principiante' && styles.experienceButtonSelected,
                                         ]}
                                         onPress={() => handleExperienceLevelSelect('Principiante')}
                                     >
                                         <Text style={[
                                             styles.experienceButtonText,
-                                            formData.experienceLevel === 'Principiante' && styles.experienceButtonTextSelected
+                                            formData.experienceLevel === 'Principiante' && styles.experienceButtonTextSelected,
                                         ]}>
                                             Principiante
                                         </Text>
@@ -147,13 +166,13 @@ const RegisterScreen: React.FC = () => {
                                     <TouchableOpacity
                                         style={[
                                             styles.experienceButton,
-                                            formData.experienceLevel === 'Avanzado' && styles.experienceButtonSelected
+                                            formData.experienceLevel === 'Avanzado' && styles.experienceButtonSelected,
                                         ]}
                                         onPress={() => handleExperienceLevelSelect('Avanzado')}
                                     >
                                         <Text style={[
                                             styles.experienceButtonText,
-                                            formData.experienceLevel === 'Avanzado' && styles.experienceButtonTextSelected
+                                            formData.experienceLevel === 'Avanzado' && styles.experienceButtonTextSelected,
                                         ]}>
                                             Avanzado
                                         </Text>
@@ -162,13 +181,13 @@ const RegisterScreen: React.FC = () => {
                                     <TouchableOpacity
                                         style={[
                                             styles.experienceButton,
-                                            formData.experienceLevel === 'Intermedio' && styles.experienceButtonSelected
+                                            formData.experienceLevel === 'Intermedio' && styles.experienceButtonSelected,
                                         ]}
                                         onPress={() => handleExperienceLevelSelect('Intermedio')}
                                     >
                                         <Text style={[
                                             styles.experienceButtonText,
-                                            formData.experienceLevel === 'Intermedio' && styles.experienceButtonTextSelected
+                                            formData.experienceLevel === 'Intermedio' && styles.experienceButtonTextSelected,
                                         ]}>
                                             Intermedio
                                         </Text>
@@ -265,11 +284,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFB347',
         borderRadius: 8,
         overflow: 'hidden',
-    },
-    picker: {
-        height: height * 0.06,
-        color: '#333',
-        fontSize: width * 0.022,
+        marginTop: 4,
     },
     experienceContainer: {
         flexDirection: 'row',
@@ -283,6 +298,7 @@ const styles = StyleSheet.create({
         paddingVertical: height * 0.015,
         alignItems: 'center',
         justifyContent: 'center',
+        marginHorizontal: 2,
     },
     experienceButtonSelected: {
         backgroundColor: '#FFB347',
@@ -309,6 +325,48 @@ const styles = StyleSheet.create({
         fontSize: width * 0.025,
         fontWeight: '600',
         color: '#FFFFFF',
+    },
+});
+
+// Agrega estilos para el modal y los botones de selección
+const modalStyles = StyleSheet.create({
+    overlay: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(0,0,0,0.3)',
+    },
+    modalBox: {
+        backgroundColor: '#fff',
+        borderRadius: 12,
+        padding: 24,
+        width: '80%',
+    },
+    optionButton: {
+        paddingVertical: 12,
+    },
+    optionText: {
+        fontSize: 16,
+        color: '#333',
+    },
+    cancelButton: {
+        marginTop: 12,
+    },
+    cancelText: {
+        color: '#FFB347',
+        textAlign: 'center',
+        fontWeight: 'bold',
+    },
+});
+
+const rowBetween = StyleSheet.create({
+    container: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+    },
+    text: {
+        flex: 1,
     },
 });
 
