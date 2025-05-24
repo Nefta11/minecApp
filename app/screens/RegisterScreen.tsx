@@ -27,7 +27,7 @@ const RegisterScreen: React.FC = () => {
 
     const handleRegister = () => {
         console.log('Datos del formulario:', formData);
-        // Aquí puedes manejar el registro
+        // Aquí ira la logica para manejar el registro
     };
 
     const handleExperienceLevelSelect = (level: RegisterFormData['experienceLevel']) => {
