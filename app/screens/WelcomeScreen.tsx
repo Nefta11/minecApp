@@ -35,7 +35,7 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = () => {
                 {/* Imagen del carrito minero */}
                 <View style={styles.illustrationContainer}>
                     <Image
-                        source={require('../../assets/carro-de-mina 1.png')}
+                        source={require('../../app/assets/minecart.png')}
                         style={styles.mineCartImage}
                         resizeMode="contain"
                     />
