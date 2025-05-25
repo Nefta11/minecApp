@@ -9,7 +9,7 @@ const WelcomeBanner = () => {
             <View style={styles.header}>
                 <Text style={styles.welcomeText}>Bienvenido, Jose</Text>
                 <TouchableOpacity style={styles.menuButton}>
-                    <Icon name="menu" size={24} color={Colors.Black} />
+                    <Icon name="menu" size={28} color={Colors.Black} />
                 </TouchableOpacity>
             </View>
             <View style={styles.bannerContent}>
@@ -30,40 +30,44 @@ const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: Colors.PrimaryYellow,
-        borderRadius: 16,
-        marginHorizontal: width * 0.04,
-        marginVertical: height * 0.02,
-        padding: width * 0.05,
+        backgroundColor: '#FFB800',
+        borderRadius: 20,
+        marginHorizontal: 16,
+        marginTop: 20,
+        marginBottom: 16,
+        padding: 20,
+        minHeight: height * 0.18,
     },
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginBottom: height * 0.02,
+        marginBottom: 16,
     },
     welcomeText: {
-        fontSize: width * 0.06,
+        fontSize: width * 0.065,
         fontWeight: '700',
         color: Colors.Black,
     },
     menuButton: {
-        padding: 4,
+        padding: 8,
     },
     bannerContent: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
+        flex: 1,
     },
     questionText: {
-        fontSize: width * 0.045,
+        fontSize: width * 0.048,
         fontWeight: '600',
         color: Colors.Black,
         flex: 1,
+        paddingRight: 16,
     },
     imageContainer: {
-        width: width * 0.15,
-        height: width * 0.15,
+        width: width * 0.18,
+        height: width * 0.18,
     },
     workerImage: {
         width: '100%',

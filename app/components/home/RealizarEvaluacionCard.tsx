@@ -1,21 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
+import { View, Text, StyleSheet, Dimensions, Image, TouchableOpacity } from 'react-native';
 import Colors from '../../utils/Colors';
 
 const RealizarEvaluacionCard: React.FC = () => {
     return (
-        <View style={styles.container}>
+        <TouchableOpacity style={styles.container} activeOpacity={0.8}>
             <View style={styles.contentContainer}>
                 <Text style={styles.title}>Realizar Evaluacion</Text>
                 <View style={styles.imageContainer}>
                     <Image
-                        source={require('../../assets/homeIcons/vf.png')} // Reemplaza con tu imagen
+                        source={require('../../assets/homeIcons/vf.png')}
                         style={styles.cardImage}
                         resizeMode="contain"
                     />
                 </View>
             </View>
-        </View>
+        </TouchableOpacity>
     );
 };
 
@@ -23,8 +23,9 @@ const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {
-        marginHorizontal: width * 0.04,
-        marginVertical: height * 0.02,
+        marginHorizontal: 16,
+        marginTop: 8,
+        marginBottom: 16,
     },
     contentContainer: {
         flexDirection: 'row',
@@ -32,25 +33,26 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         backgroundColor: Colors.White,
         borderRadius: 16,
-        padding: width * 0.05,
-        elevation: 2,
+        padding: 20,
+        minHeight: height * 0.1,
+        elevation: 3,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.1,
-        shadowRadius: 4,
+        shadowOpacity: 0.15,
+        shadowRadius: 6,
     },
     title: {
-        fontSize: width * 0.05,
+        fontSize: width * 0.052,
         fontWeight: '700',
         color: Colors.Black,
         flex: 1,
     },
     imageContainer: {
-        marginLeft: width * 0.04,
+        marginLeft: 16,
     },
     cardImage: {
-        width: width * 0.15,
-        height: width * 0.15,
+        width: width * 0.16,
+        height: width * 0.16,
     },
 });
 

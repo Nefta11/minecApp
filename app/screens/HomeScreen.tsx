@@ -41,7 +41,6 @@ const HomeScreen: React.FC = () => {
                         </View>
                     </View>
 
-
                     {/* Evaluación */}
                     <RealizarEvaluacionCard />
                 </ScrollView>
@@ -53,18 +52,19 @@ const HomeScreen: React.FC = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.White,
+        backgroundColor: '#F5F5F5',
     },
     scrollContent: {
         paddingBottom: 20,
     },
     cardsGrid: {
         paddingHorizontal: 16,
+        marginBottom: 8,
     },
     cardRow: {
         flexDirection: 'row',
-        marginBottom: 16,
-        gap: 16,
+        marginBottom: 12,
+        gap: 12,
     },
     cardColumn: {
         flex: 1,

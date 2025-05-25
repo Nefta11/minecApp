@@ -8,7 +8,7 @@ const ExportarResultadosCard: React.FC = () => {
             <Text style={styles.title}>Exportar{'\n'}resultados</Text>
             <View style={styles.imageContainer}>
                 <Image
-                    source={require('../../assets/homeIcons/otg.png')} // Reemplaza con tu imagen
+                    source={require('../../assets/homeIcons/otg.png')}
                     style={styles.cardImage}
                     resizeMode="contain"
                 />
@@ -21,27 +21,27 @@ const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: Colors.DavysGrey,
+        backgroundColor: '#4A4A4A',
         borderRadius: 16,
-        padding: width * 0.04,
-        height: height * 0.25,
+        padding: 16,
+        height: height * 0.22,
         justifyContent: 'space-between',
     },
     title: {
-        fontSize: width * 0.04,
+        fontSize: width * 0.042,
         fontWeight: '600',
         color: Colors.White,
-        lineHeight: width * 0.045,
+        lineHeight: width * 0.048,
     },
     imageContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginTop: height * 0.02,
+        marginTop: 12,
     },
     cardImage: {
-        width: width * 0.2,
-        height: width * 0.2,
+        width: width * 0.22,
+        height: width * 0.22,
     },
 });
 
