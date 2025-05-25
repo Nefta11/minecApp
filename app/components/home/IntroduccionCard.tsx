@@ -23,8 +23,9 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#4A4A4A',
         borderRadius: 12,
-        padding: 12,
-        aspectRatio: 1, // Hace la card cuadrada
+        padding: 8,
+        width: width * 0.25,
+        height: width * 0.25,
         justifyContent: 'center',
     },
     content: {
@@ -34,15 +35,15 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     title: {
-        fontSize: width * 0.035,
+        fontSize: width * 0.028,
         fontWeight: '600',
         color: Colors.White,
         flex: 1,
-        paddingRight: 8,
+        paddingRight: 6,
     },
     cardImage: {
-        width: width * 0.08,
-        height: width * 0.08,
+        width: width * 0.06,
+        height: width * 0.06,
     },
 });
 

@@ -23,28 +23,30 @@ const HomeScreen: React.FC = () => {
 
                     {/* Grid reorganizado con card central */}
                     <View style={styles.cardsGrid}>
-                        {/* Primera fila */}
-                        <View style={styles.topRow}>
-                            <View style={styles.smallCard}>
-                                <IntroduccionCard />
+                        <View style={styles.gridContainer}>
+                            {/* Columna izquierda */}
+                            <View style={styles.leftColumn}>
+                                <View style={styles.cardWrapper}>
+                                    <IntroduccionCard />
+                                </View>
+                                <View style={styles.cardWrapper}>
+                                    <TeoriaCard />
+                                </View>
                             </View>
-                            <View style={styles.smallCard}>
-                                <ActividadesInteractivasCard />
-                            </View>
-                        </View>
 
-                        {/* Card central */}
-                        <View style={styles.centralCardContainer}>
-                            <CentralCard />
-                        </View>
-
-                        {/* Segunda fila */}
-                        <View style={styles.bottomRow}>
-                            <View style={styles.smallCard}>
-                                <TeoriaCard />
+                            {/* Card central */}
+                            <View style={styles.centralColumn}>
+                                <CentralCard />
                             </View>
-                            <View style={styles.smallCard}>
-                                <ExportarResultadosCard />
+
+                            {/* Columna derecha */}
+                            <View style={styles.rightColumn}>
+                                <View style={styles.cardWrapper}>
+                                    <ActividadesInteractivasCard />
+                                </View>
+                                <View style={styles.cardWrapper}>
+                                    <ExportarResultadosCard />
+                                </View>
                             </View>
                         </View>
                     </View>
@@ -69,25 +71,26 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         marginBottom: 8,
     },
-    topRow: {
+    gridContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginBottom: 12,
-        gap: 12,
+        alignItems: 'center',
+        minHeight: 220,
     },
-    bottomRow: {
-        flexDirection: 'row',
+    leftColumn: {
         justifyContent: 'space-between',
-        marginTop: 12,
-        gap: 12,
+        height: 620,
     },
-    smallCard: {
-        flex: 1,
-        maxWidth: '45%',
+    rightColumn: {
+        justifyContent: 'space-between',
+        height: 620,
     },
-    centralCardContainer: {
-        alignSelf: 'center',
-        width: '70%',
+    centralColumn: {
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    cardWrapper: {
+        marginBottom: 4,
     },
 });
 
