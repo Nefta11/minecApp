@@ -5,8 +5,8 @@ import Colors from '../../utils/Colors';
 const ActividadesInteractivasCard: React.FC = () => {
     return (
         <TouchableOpacity style={styles.container} activeOpacity={0.8}>
-            <Text style={styles.title}>Actividades{'\n'}Interactivas</Text>
-            <View style={styles.imageContainer}>
+            <View style={styles.content}>
+                <Text style={styles.title}>Actividades{'\n'}Interactivas</Text>
                 <Image
                     source={require('../../assets/homeIcons/interaccion.png')}
                     style={styles.cardImage}
@@ -17,31 +17,33 @@ const ActividadesInteractivasCard: React.FC = () => {
     );
 };
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {
         backgroundColor: '#9DB4C4',
-        borderRadius: 16,
-        padding: 16,
-        height: height * 0.22,
+        borderRadius: 12,
+        padding: 12,
+        aspectRatio: 1, // Hace la card cuadrada
+        justifyContent: 'center',
+    },
+    content: {
+        flexDirection: 'row',
+        alignItems: 'center',
         justifyContent: 'space-between',
+        flex: 1,
     },
     title: {
-        fontSize: width * 0.042,
+        fontSize: width * 0.035,
         fontWeight: '600',
         color: Colors.White,
-        lineHeight: width * 0.048,
-    },
-    imageContainer: {
+        lineHeight: width * 0.04,
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        marginTop: 12,
+        paddingRight: 8,
     },
     cardImage: {
-        width: width * 0.2,
-        height: width * 0.2,
+        width: width * 0.08,
+        height: width * 0.08,
     },
 });
 

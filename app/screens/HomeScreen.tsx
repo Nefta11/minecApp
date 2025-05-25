@@ -6,6 +6,7 @@ import IntroduccionCard from '../components/home/IntroduccionCard';
 import ActividadesInteractivasCard from '../components/home/ActividadesInteractivasCard';
 import TeoriaCard from '../components/home/TeoriaCard';
 import ExportarResultadosCard from '../components/home/ExportarResultadosCard';
+import CentralCard from '../components/home/CentralCard';
 import RealizarEvaluacionCard from '../components/home/RealizarEvaluacionCard';
 
 const HomeScreen: React.FC = () => {
@@ -20,22 +21,29 @@ const HomeScreen: React.FC = () => {
                     {/* Banner de bienvenida */}
                     <WelcomeBanner />
 
-                    {/* Grid de tarjetas principales */}
+                    {/* Grid reorganizado con card central */}
                     <View style={styles.cardsGrid}>
-                        <View style={styles.cardRow}>
-                            <View style={styles.cardColumn}>
+                        {/* Primera fila */}
+                        <View style={styles.topRow}>
+                            <View style={styles.smallCard}>
                                 <IntroduccionCard />
                             </View>
-                            <View style={styles.cardColumn}>
+                            <View style={styles.smallCard}>
                                 <ActividadesInteractivasCard />
                             </View>
                         </View>
 
-                        <View style={styles.cardRow}>
-                            <View style={styles.cardColumn}>
+                        {/* Card central */}
+                        <View style={styles.centralCardContainer}>
+                            <CentralCard />
+                        </View>
+
+                        {/* Segunda fila */}
+                        <View style={styles.bottomRow}>
+                            <View style={styles.smallCard}>
                                 <TeoriaCard />
                             </View>
-                            <View style={styles.cardColumn}>
+                            <View style={styles.smallCard}>
                                 <ExportarResultadosCard />
                             </View>
                         </View>
@@ -61,13 +69,25 @@ const styles = StyleSheet.create({
         paddingHorizontal: 16,
         marginBottom: 8,
     },
-    cardRow: {
+    topRow: {
         flexDirection: 'row',
+        justifyContent: 'space-between',
         marginBottom: 12,
         gap: 12,
     },
-    cardColumn: {
+    bottomRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 12,
+        gap: 12,
+    },
+    smallCard: {
         flex: 1,
+        maxWidth: '45%',
+    },
+    centralCardContainer: {
+        alignSelf: 'center',
+        width: '70%',
     },
 });
 
