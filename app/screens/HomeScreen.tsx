@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
     },
     cardsGrid: {
-        paddingHorizontal: 16,
+        paddingHorizontal: 42,
         marginBottom: 8,
     },
     gridContainer: {
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     cardWrapper: {
-        marginBottom: 4,
+        marginBottom: 8,
     },
 });
 
