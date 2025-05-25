@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { View, Text, StyleSheet, Dimensions, Image } from 'react-native';
 import Colors from '../../utils/Colors';
 
 const WelcomeBanner = () => {
