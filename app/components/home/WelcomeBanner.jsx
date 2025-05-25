@@ -16,7 +16,7 @@ const WelcomeBanner = () => {
                 <Text style={styles.questionText}>¿Que quieres aprender hoy?</Text>
                 <View style={styles.imageContainer}>
                     <Image
-                        source={require('../../assets/homeIcons/minero1.png')} 
+                        source={require('../../assets/homeIcons/minero1.png')}
                         style={styles.workerImage}
                         resizeMode="contain"
                     />
