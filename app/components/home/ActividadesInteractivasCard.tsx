@@ -21,12 +21,13 @@ const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#9DB4C4',
+        backgroundColor: Colors.DavysGrey,
         borderRadius: 12,
         padding: 8,
         width: width * 0.25,
-        height: width * 0.22,
+        height: width * 0.17,
         justifyContent: 'center',
+        marginTop: 1,
     },
     content: {
         flexDirection: 'row',

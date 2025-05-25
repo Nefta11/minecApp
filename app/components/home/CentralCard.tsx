@@ -22,10 +22,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFF8E1',
         borderRadius: 12,
         padding: 12,
-        width: width * 0.32,
-        height: width * 0.50,
+        width: width * 0.31,
+        height: width * 0.37,
         justifyContent: 'center',
         alignItems: 'center',
+        marginBottom: 150,
     },
     imageContainer: {
         flex: 1,
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     },
     centralImage: {
         width: width * 0.5,
-        height: width * 0.25,
+        height: width * 0.22,
     },
 });
 

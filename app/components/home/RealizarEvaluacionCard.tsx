@@ -24,8 +24,7 @@ const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         marginHorizontal: 16,
-        marginTop: 8,
-        marginBottom: 16,
+        marginTop: -120,
     },
     contentContainer: {
         flexDirection: 'row',
