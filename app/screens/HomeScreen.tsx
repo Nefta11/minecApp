@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     cardWrapper: {
-        marginBottom: 8,
+        marginTop: 4,
     },
 });
 
