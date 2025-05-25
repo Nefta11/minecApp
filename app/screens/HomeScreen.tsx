@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, ScrollView, StatusBar, Text, Dimensions, TouchableOpacity } from 'react-native';
 import Colors from '../utils/Colors';
 import WelcomeBanner from '../components/home/WelcomeBanner';
@@ -9,8 +9,18 @@ import ExportarResultadosCard from '../components/home/ExportarResultadosCard';
 import CentralCard from '../components/home/CentralCard';
 import RealizarEvaluacionCard from '../components/home/RealizarEvaluacionCard';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import LogoutModal from '../components/home/LogoutModal';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
 
 const HomeScreen: React.FC = () => {
+    const [logoutVisible, setLogoutVisible] = useState(false);
+    const navigation = useNavigation<NavigationProp<any>>();
+    const handleLogout = () => setLogoutVisible(true);
+    const handleConfirmLogout = () => {
+        setLogoutVisible(false);
+        navigation.reset({ index: 0, routes: [{ name: 'Register' }] });
+    };
+    const handleCancelLogout = () => setLogoutVisible(false);
     return (
         <>
             <StatusBar backgroundColor={Colors.White} barStyle="dark-content" />
@@ -22,7 +32,7 @@ const HomeScreen: React.FC = () => {
                     {/* Header */}
                     <View style={styles.header}>
                         <Text style={styles.headerText}>Bienvenido, Jose</Text>
-                        <TouchableOpacity style={styles.profileButton}>
+                        <TouchableOpacity style={styles.profileButton} onPress={handleLogout}>
                             <Icon name="logout" size={36} color="#000" />
                         </TouchableOpacity>
                     </View>
@@ -64,6 +74,11 @@ const HomeScreen: React.FC = () => {
                     <RealizarEvaluacionCard />
                 </ScrollView>
             </View>
+            <LogoutModal
+                visible={logoutVisible}
+                onConfirm={handleConfirmLogout}
+                onCancel={handleCancelLogout}
+            />
         </>
     );
 };
