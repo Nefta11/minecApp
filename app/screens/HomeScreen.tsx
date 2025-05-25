@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView, StatusBar } from 'react-native';
+import { View, StyleSheet, ScrollView, StatusBar, Text, Dimensions, TouchableOpacity } from 'react-native';
 import Colors from '../utils/Colors';
 import WelcomeBanner from '../components/home/WelcomeBanner';
 import IntroduccionCard from '../components/home/IntroduccionCard';
@@ -8,6 +8,7 @@ import TeoriaCard from '../components/home/TeoriaCard';
 import ExportarResultadosCard from '../components/home/ExportarResultadosCard';
 import CentralCard from '../components/home/CentralCard';
 import RealizarEvaluacionCard from '../components/home/RealizarEvaluacionCard';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const HomeScreen: React.FC = () => {
     return (
@@ -18,6 +19,14 @@ const HomeScreen: React.FC = () => {
                     showsVerticalScrollIndicator={false}
                     contentContainerStyle={styles.scrollContent}
                 >
+                    {/* Header */}
+                    <View style={styles.header}>
+                        <Text style={styles.headerText}>Bienvenido, Jose</Text>
+                        <TouchableOpacity style={styles.profileButton}>
+                            <Icon name="logout" size={36} color="#000" />
+                        </TouchableOpacity>
+                    </View>
+
                     {/* Banner de bienvenida */}
                     <WelcomeBanner />
 
@@ -59,14 +68,33 @@ const HomeScreen: React.FC = () => {
     );
 };
 
+const { width } = Dimensions.get('window');
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F5F5F5',
+        backgroundColor: Colors.White,
     },
     scrollContent: {
         paddingBottom: 20,
     },
+    header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingHorizontal: 16,
+        paddingTop: 16,
+        paddingBottom: 8,
+    },
+    headerText: {
+        fontSize: width * 0.05,
+        fontWeight: '700',
+        color: Colors.Black,
+    },
+    profileButton: {
+        padding: 10,
+    },
+
     cardsGrid: {
         paddingHorizontal: 42,
         marginBottom: 8,
