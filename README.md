@@ -1,98 +1,115 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# minecApp
 
-# Getting Started
+minecApp es una aplicación educativa móvil desarrollada en **React Native** que busca facilitar el aprendizaje y entrenamiento de mineros a través de módulos interactivos, teoría, evaluaciones y exportación de resultados. Su diseño es moderno, intuitivo y adaptable a diferentes dispositivos.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## 🚀 Características principales
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- **Inicio de sesión y registro** de usuarios.
+- **Pantalla de bienvenida** personalizada.
+- **Módulos de aprendizaje**:
+  - Introducción interactiva.
+  - Teoría y conceptos clave.
+  - Actividades prácticas y evaluaciones.
+- **Exportación de resultados** para seguimiento y análisis.
+- **Navegación fluida** entre pantallas.
+- **Diseño responsivo** y atractivo.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
+
+## 📱 Instalación y ejecución
+
+### 1. Clona el repositorio
 
 ```sh
-# Using npm
-npm start
+git clone <url-del-repositorio>
+cd minecApp
+```
 
-# OR using Yarn
+### 2. Instala las dependencias
+
+```sh
+npm install
+# o
+yarn install
+```
+
+### 3. Ejecuta Metro Bundler
+
+```sh
+npm start
+# o
 yarn start
 ```
 
-## Step 2: Build and run your app
+### 4. Corre la app en tu dispositivo o emulador
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
+#### Android
 ```sh
-# Using npm
 npm run android
-
-# OR using Yarn
+# o
 yarn android
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
+#### iOS
+Asegúrate de tener CocoaPods instalado:
 ```sh
-bundle install
+cd ios && pod install && cd ..
 ```
-
-Then, and every time you update your native dependencies, run:
-
+Luego:
 ```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
 npm run ios
-
-# OR using Yarn
+# o
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+---
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🧩 Estructura del proyecto
 
-## Step 3: Modify your app
+```
+app/
+  assets/           # Imágenes y recursos
+  components/       # Componentes reutilizables
+  navigation/       # Navegación de la app
+  screens/          # Pantallas principales
+  store/            # Estado global (si aplica)
+  utils/            # Utilidades y helpers
+App.tsx             # Entry point
+```
 
-Now that you have successfully run the app, let's make changes!
+---
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 🛠️ Tecnologías utilizadas
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+- [React Native](https://reactnative.dev/)
+- [React Navigation](https://reactnavigation.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+---
 
-## Congratulations! :tada:
+## 👨‍💻 Contribuir
 
-You've successfully run and modified your React Native App. :partying_face:
+1. Haz un fork del repositorio.
+2. Crea una rama para tu feature/fix: `git checkout -b mi-feature`.
+3. Realiza tus cambios y haz commit: `git commit -m 'Agrega mi feature'`.
+4. Haz push a tu rama: `git push origin mi-feature`.
+5. Abre un Pull Request.
 
-### Now what?
+---
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 📄 Licencia
 
-# Troubleshooting
+Este proyecto está bajo la licencia MIT.
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+---
 
-# Learn More
+## 📬 Contacto
 
-To learn more about React Native, take a look at the following resources:
+¿Tienes dudas, sugerencias o quieres colaborar? ¡Contáctanos!
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-# minecApp
+---
+
+¡Gracias por usar **minecApp**! 🚀⛏️
