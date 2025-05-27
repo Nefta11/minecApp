@@ -8,7 +8,7 @@ interface LogoutModalProps {
   onCancel: () => void;
 }
 
-const { width, height } = Dimensions.get('window');
+const { width } = Dimensions.get('window');
 
 const LogoutModal: React.FC<LogoutModalProps> = ({ visible, onConfirm, onCancel }) => {
   return (
