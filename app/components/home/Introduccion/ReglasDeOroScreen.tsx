@@ -107,7 +107,7 @@ const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.White,
+        backgroundColor: Colors.Ivory,
     },
     header: {
         flexDirection: 'row',
