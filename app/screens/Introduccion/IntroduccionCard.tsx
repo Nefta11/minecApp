@@ -21,7 +21,7 @@ const IntroduccionCard: React.FC = () => {
                 <Text style={styles.title}>Introduccion</Text>
                 <View style={styles.iconWrapper}>
                     <Image
-                        source={require('../../../assets/homeIcons/entrenamiento1.png')}
+                        source={require('../../assets/homeIcons/entrenamiento1.png')}
                         style={styles.cardImage}
                         resizeMode="contain"
                     />

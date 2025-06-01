@@ -74,7 +74,7 @@ const ReglasDeOroScreen: React.FC = () => {
 
                     <View style={styles.imageSection}>
                         <Image
-                            source={require('../../../assets/regla-de-oro1.png')}
+                            source={require('../../assets/regla-de-oro1.png')}
                             style={styles.minerImage}
                             resizeMode="contain"
                         />

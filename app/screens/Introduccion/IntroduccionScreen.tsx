@@ -47,7 +47,7 @@ const IntroduccionScreen: React.FC = () => {
                     <View style={styles.mainContent}>
                         <View style={styles.imageSection}>
                             <Image
-                                source={require('../../../assets/minero2.png')}
+                                source={require('../../assets/minero2.png')}
                                 style={styles.minerImage}
                                 resizeMode="contain"
                             />
