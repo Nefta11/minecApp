@@ -31,7 +31,6 @@ const IntroduccionScreen: React.FC = () => {
                     contentContainerStyle={styles.scrollContent}
                     showsVerticalScrollIndicator={false}
                 >
-                    {/* Header con botón de regreso solamente */}
                     <View style={styles.header}>
                         <TouchableOpacity
                             style={styles.backButton}
@@ -42,9 +41,7 @@ const IntroduccionScreen: React.FC = () => {
                         </TouchableOpacity>
                     </View>
 
-                    {/* Contenido principal */}
                     <View style={styles.mainContent}>
-                        {/* Imagen del minero */}
                         <View style={styles.imageSection}>
                             <Image
                                 source={require('../../../assets/minero2.png')}
@@ -53,12 +50,10 @@ const IntroduccionScreen: React.FC = () => {
                             />
                         </View>
 
-                        {/* Sección de texto con título */}
                         <View style={styles.textSection}>
-                            {/* Título Introducción */}
+
                             <Text style={styles.sectionTitle}>Introducción</Text>
 
-                            {/* Card de texto */}
                             <View style={styles.textCard}>
                                 <Text style={styles.welcomeTitle}>Bienvenido al curso</Text>
 
@@ -73,7 +68,6 @@ const IntroduccionScreen: React.FC = () => {
                         </View>
                     </View>
 
-                    {/* Botón Siguiente */}
                     <View style={styles.buttonContainer}>
                         <TouchableOpacity
                             style={styles.nextButton}
@@ -105,13 +99,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 20,
-        paddingTop: 30, // más espacio arriba
-        paddingBottom: 18, // más espacio abajo
+        paddingTop: 30,
+        paddingBottom: 18,
     },
     backButton: {
-        width: 70, // antes 50
-        height: 70, // antes 50
-        borderRadius: 35, // antes 25
+        width: 70,
+        height: 70,
+        borderRadius: 35,
         backgroundColor: Colors.PrimaryYellow,
         justifyContent: 'center',
         alignItems: 'center',
@@ -195,17 +189,17 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 4,
-        minWidth: 60, // más pequeño
+        minWidth: 60,
         justifyContent: 'center',
     },
     nextButtonText: {
-        fontSize: width * 0.020, // más pequeño
+        fontSize: width * 0.020,
         fontWeight: '600',
         color: Colors.White,
-        marginRight: 4, // más pequeño
+        marginRight: 4,
     },
     nextArrow: {
-        fontSize: width * 0.020, // más pequeño
+        fontSize: width * 0.020,
         fontWeight: 'bold',
         color: Colors.White,
     },
