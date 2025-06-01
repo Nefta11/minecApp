@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
         color: Colors.Black,
     },
     headerTitle: {
-        fontSize: width * 0.025,
+        fontSize: width * 0.035, // antes: 0.025
         fontWeight: '700',
         color: Colors.Black,
         textAlign: 'center',
@@ -177,27 +177,27 @@ const styles = StyleSheet.create({
         marginBottom: 18,
     },
     ruleNumber: {
-        fontSize: width * 0.018,
+        fontSize: width * 0.020,
         fontWeight: '700',
         color: Colors.Black,
     },
     ruleTitle: {
-        fontSize: width * 0.018,
+        fontSize: width * 0.020,
         fontWeight: '700',
         color: Colors.Black,
     },
     ruleText: {
-        fontSize: width * 0.018,
+        fontSize: width * 0.020,
         fontWeight: '400',
         color: Colors.Black,
-        lineHeight: width * 0.025,
+        lineHeight: width * 0.028, // aumentado
         textAlign: 'justify',
     },
     additionalText: {
-        fontSize: width * 0.018,
+        fontSize: width * 0.020, // aumentado
         fontWeight: '400',
         color: Colors.Black,
-        lineHeight: width * 0.025,
+        lineHeight: width * 0.028, // aumentado
         textAlign: 'justify',
         marginTop: 14,
     },
@@ -232,13 +232,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     startButtonText: {
-        fontSize: width * 0.012,
+        fontSize: width * 0.022, // antes: 0.012
         fontWeight: '400',
         color: Colors.White,
         marginRight: 8,
     },
     startArrow: {
-        fontSize: width * 0.012,
+        fontSize: width * 0.022, // antes: 0.012
         fontWeight: 'bold',
         color: Colors.White,
     },
