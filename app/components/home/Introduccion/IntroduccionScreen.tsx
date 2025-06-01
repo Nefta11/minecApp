@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     nextButton: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: Colors.CadetGrey,
+        backgroundColor: '#4A4A4A',
         paddingHorizontal: 20,
         paddingVertical: 15,
         borderRadius: 10,
