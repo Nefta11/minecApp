@@ -1,15 +1,27 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native';
-import Colors from '../../utils/Colors';
+import Colors from '../../../utils/Colors';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
+
+// Define your stack param list with the correct route names
+type RootStackParamList = {
+    IntroduccionScreen: undefined;
+    // add other routes here if needed
+};
 
 const IntroduccionCard: React.FC = () => {
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     return (
-        <TouchableOpacity style={styles.container} activeOpacity={0.8}>
+        <TouchableOpacity
+            style={styles.container}
+            activeOpacity={0.8}
+            onPress={() => navigation.navigate('IntroduccionScreen')}
+        >
             <View style={styles.content}>
                 <Text style={styles.title}>Introduccion</Text>
                 <View style={styles.iconWrapper}>
                     <Image
-                        source={require('../../assets/homeIcons/entrenamiento1.png')}
+                        source={require('../../../assets/homeIcons/entrenamiento1.png')}
                         style={styles.cardImage}
                         resizeMode="contain"
                     />

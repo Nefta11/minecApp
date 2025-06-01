@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, StyleSheet, ScrollView, StatusBar, Text, Dimensions, TouchableOpacity } from 'react-native';
 import Colors from '../utils/Colors';
 import WelcomeBanner from '../components/home/WelcomeBanner';
-import IntroduccionCard from '../components/home/IntroduccionCard';
+import IntroduccionCard from '../components/home/Introduccion/IntroduccionCard';
 import ActividadesInteractivasCard from '../components/home/ActividadesInteractivasCard';
 import TeoriaCard from '../components/home/TeoriaCard';
 import ExportarResultadosCard from '../components/home/ExportarResultadosCard';
