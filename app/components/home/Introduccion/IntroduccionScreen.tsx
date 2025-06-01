@@ -30,7 +30,7 @@ const IntroduccionScreen: React.FC = () => {
                     contentContainerStyle={styles.scrollContent}
                     showsVerticalScrollIndicator={false}
                 >
-                    {/* Header con botón de regreso */}
+                    {/* Header con botón de regreso solamente */}
                     <View style={styles.header}>
                         <TouchableOpacity
                             style={styles.backButton}
@@ -39,8 +39,6 @@ const IntroduccionScreen: React.FC = () => {
                         >
                             <Text style={styles.backArrow}>←</Text>
                         </TouchableOpacity>
-                        <Text style={styles.headerTitle}>Introducción</Text>
-                        <View style={styles.placeholder} />
                     </View>
 
                     {/* Contenido principal */}
@@ -54,10 +52,14 @@ const IntroduccionScreen: React.FC = () => {
                             />
                         </View>
 
-                        {/* Card de texto */}
+                        {/* Sección de texto con título */}
                         <View style={styles.textSection}>
+                            {/* Título Introducción */}
+                            <Text style={styles.sectionTitle}>Introducción</Text>
+
+                            {/* Card de texto */}
                             <View style={styles.textCard}>
-                                <Text style={styles.welcomeTitle}>Bienvenido al curso.</Text>
+                                <Text style={styles.welcomeTitle}>Bienvenido al curso</Text>
 
                                 <Text style={styles.description}>
                                     El objetivo principal es transformarte en un operador profesional y
@@ -101,7 +103,6 @@ const styles = StyleSheet.create({
     header: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
         paddingHorizontal: 20,
         paddingTop: 20,
         paddingBottom: 10,
@@ -124,15 +125,6 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: Colors.Black,
     },
-    headerTitle: {
-        fontSize: width * 0.06,
-        fontWeight: '700',
-        color: Colors.Black,
-        textAlign: 'center',
-    },
-    placeholder: {
-        width: 50, // Para balancear el header
-    },
     mainContent: {
         flex: 1,
         flexDirection: 'row',
@@ -143,9 +135,10 @@ const styles = StyleSheet.create({
     },
     imageSection: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         alignItems: 'center',
-        paddingRight: 20,
+        paddingRight: 30,
+        marginTop: -80,
     },
     minerImage: {
         width: width * 0.35,
@@ -153,12 +146,20 @@ const styles = StyleSheet.create({
     },
     textSection: {
         flex: 1.2,
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
+    },
+    sectionTitle: {
+        fontSize: width * 0.050,
+        fontWeight: '700',
+        color: Colors.Black,
+        textAlign: 'center',
+        marginBottom: 10,
+        marginTop: -100,
     },
     textCard: {
         backgroundColor: '#9DB4C4',
-        borderRadius: 16,
-        padding: 24,
+        borderRadius: 20,
+        padding: 32,
         elevation: 2,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
@@ -166,30 +167,32 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
     },
     welcomeTitle: {
-        fontSize: width * 0.048,
+        fontSize: width * 0.035,
         fontWeight: '600',
         color: Colors.White,
-        marginBottom: 16,
+        marginBottom: 20,
         textAlign: 'center',
+        lineHeight: width * 0.040,
     },
     description: {
-        fontSize: width * 0.038,
-        lineHeight: width * 0.055,
+        fontSize: width * 0.025,
+        lineHeight: width * 0.035,
         color: Colors.White,
         textAlign: 'justify',
         fontWeight: '400',
+        letterSpacing: 0.2,
     },
     buttonContainer: {
         alignItems: 'center',
         paddingHorizontal: 20,
-        marginTop: 30,
+        marginTop: 40,
     },
     nextButton: {
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#4A4A4A',
-        paddingHorizontal: 30,
-        paddingVertical: 15,
+        paddingHorizontal: 32,
+        paddingVertical: 16,
         borderRadius: 12,
         elevation: 3,
         shadowColor: '#000',
