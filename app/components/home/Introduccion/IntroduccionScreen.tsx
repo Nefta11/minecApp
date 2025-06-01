@@ -39,7 +39,7 @@ const IntroduccionScreen: React.FC = () => {
                             onPress={handleGoBack}
                             activeOpacity={0.8}
                         >
-                            <Icon name="arrow-back" size={40} color={Colors.Black} />
+                            <Icon name="arrow-back" size={60} color={Colors.Black} />
                         </TouchableOpacity>
                     </View>
 
