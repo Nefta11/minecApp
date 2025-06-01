@@ -140,13 +140,13 @@ const styles = StyleSheet.create({
         color: Colors.Black,
     },
     headerTitle: {
-        fontSize: width * 0.035, // antes: 0.025
+        fontSize: width * 0.035,
         fontWeight: '700',
         color: Colors.Black,
         textAlign: 'center',
     },
     placeholder: {
-        width: 50, // Para balancear el header
+        width: 50,
     },
     mainContent: {
         flex: 1,
@@ -180,14 +180,14 @@ const styles = StyleSheet.create({
         fontSize: width * 0.020,
         fontWeight: '400',
         color: Colors.Black,
-        lineHeight: width * 0.028, // aumentado
+        lineHeight: width * 0.028,
         textAlign: 'justify',
     },
     additionalText: {
-        fontSize: width * 0.020, // aumentado
+        fontSize: width * 0.020,
         fontWeight: '400',
         color: Colors.Black,
-        lineHeight: width * 0.028, // aumentado
+        lineHeight: width * 0.028,
         textAlign: 'justify',
         marginTop: 14,
     },
@@ -204,32 +204,32 @@ const styles = StyleSheet.create({
     buttonContainer: {
         alignItems: 'center',
         paddingHorizontal: 20,
-        marginTop: 0, // Subido al máximo
-        marginBottom: 10, // Un poco de espacio inferior
+        marginTop: -10,
+        marginBottom: 20,
     },
     startButton: {
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#4A4A4A',
-        paddingHorizontal: 32,
-        paddingVertical: 16,
+        paddingHorizontal: 22,
+        paddingVertical: 12,
         borderRadius: 12,
         elevation: 3,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 4,
-        minWidth: 180,
+        minWidth: 140,
         justifyContent: 'center',
     },
     startButtonText: {
-        fontSize: width * 0.022, // antes: 0.012
+        fontSize: width * 0.020,
         fontWeight: '400',
         color: Colors.White,
-        marginRight: 8,
+        marginRight: 6,
     },
     startArrow: {
-        fontSize: width * 0.022, // antes: 0.012
+        fontSize: width * 0.020,
         fontWeight: 'bold',
         color: Colors.White,
     },
