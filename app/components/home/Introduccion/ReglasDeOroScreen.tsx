@@ -10,6 +10,7 @@ import {
     ScrollView,
 } from 'react-native';
 import Colors from '../../../utils/Colors';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const ReglasDeOroScreen: React.FC = () => {
     const handleGoBack = () => {
@@ -37,7 +38,7 @@ const ReglasDeOroScreen: React.FC = () => {
                             onPress={handleGoBack}
                             activeOpacity={0.8}
                         >
-                            <Text style={styles.backArrow}>←</Text>
+                            <Icon name="arrow-back" size={60} color={Colors.Black} />
                         </TouchableOpacity>
                         <Text style={styles.headerTitle}>Reglas de oro</Text>
                         <View style={styles.placeholder} />
@@ -48,33 +49,33 @@ const ReglasDeOroScreen: React.FC = () => {
                         {/* Card amarilla con las reglas */}
                         <View style={styles.rulesCard}>
                             <View style={styles.ruleItem}>
-                                <Text style={styles.ruleNumber}>1. </Text>
-                                <Text style={styles.ruleTitle}>Puntualidad: </Text>
                                 <Text style={styles.ruleText}>
+                                    <Text style={styles.ruleNumber}>1. </Text>
+                                    <Text style={styles.ruleTitle}>Puntualidad: </Text>
                                     La puntualidad es clave para asegurar que el curso se desarrolle de manera fluida y eficaz.
                                 </Text>
                             </View>
 
                             <View style={styles.ruleItem}>
-                                <Text style={styles.ruleNumber}>2. </Text>
-                                <Text style={styles.ruleTitle}>Respeto: </Text>
                                 <Text style={styles.ruleText}>
+                                    <Text style={styles.ruleNumber}>2. </Text>
+                                    <Text style={styles.ruleTitle}>Respeto: </Text>
                                     Muestra respeto hacia los demás participantes y el material del curso.
                                 </Text>
                             </View>
 
                             <View style={styles.ruleItem}>
-                                <Text style={styles.ruleNumber}>3. </Text>
-                                <Text style={styles.ruleTitle}>Participación activa: </Text>
                                 <Text style={styles.ruleText}>
+                                    <Text style={styles.ruleNumber}>3. </Text>
+                                    <Text style={styles.ruleTitle}>Participación activa: </Text>
                                     Participa en todas las actividades y discusiones para aprovechar mejor el curso
                                 </Text>
                             </View>
 
                             <View style={styles.ruleItem}>
-                                <Text style={styles.ruleNumber}>4. </Text>
-                                <Text style={styles.ruleTitle}>Romper Paradigmas: </Text>
                                 <Text style={styles.ruleText}>
+                                    <Text style={styles.ruleNumber}>4. </Text>
+                                    <Text style={styles.ruleTitle}>Romper Paradigmas: </Text>
                                     Abre tu mente a nuevos enfoques.
                                 </Text>
                             </View>
@@ -131,9 +132,9 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
     },
     backButton: {
-        width: 50,
-        height: 50,
-        borderRadius: 25,
+        width: 70,
+        height: 70,
+        borderRadius: 35,
         backgroundColor: Colors.PrimaryYellow,
         justifyContent: 'center',
         alignItems: 'center',
@@ -149,7 +150,7 @@ const styles = StyleSheet.create({
         color: Colors.Black,
     },
     headerTitle: {
-        fontSize: width * 0.06,
+        fontSize: width * 0.025,
         fontWeight: '700',
         color: Colors.Black,
         textAlign: 'center',
@@ -162,57 +163,53 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'flex-start',
         paddingHorizontal: 20,
-        paddingVertical: 30,
+        paddingVertical: 20,
         minHeight: height * 0.65,
     },
     rulesCard: {
         backgroundColor: Colors.PrimaryYellow,
         borderRadius: 20,
-        padding: 24,
-        flex: 1.3,
-        marginRight: 20,
+        padding: 28,
+        flex: 1.2,
+        marginRight: 15,
     },
     ruleItem: {
-        flexDirection: 'row',
-        marginBottom: 16,
-        alignItems: 'flex-start',
+        marginBottom: 18,
     },
     ruleNumber: {
-        fontSize: width * 0.042,
+        fontSize: width * 0.018,
         fontWeight: '700',
         color: Colors.Black,
     },
     ruleTitle: {
-        fontSize: width * 0.042,
+        fontSize: width * 0.018,
         fontWeight: '700',
         color: Colors.Black,
     },
     ruleText: {
-        fontSize: width * 0.042,
+        fontSize: width * 0.018,
         fontWeight: '400',
         color: Colors.Black,
-        lineHeight: width * 0.058,
-        flex: 1,
+        lineHeight: width * 0.025,
         textAlign: 'justify',
     },
     additionalText: {
-        fontSize: width * 0.042,
+        fontSize: width * 0.018,
         fontWeight: '400',
         color: Colors.Black,
-        lineHeight: width * 0.058,
+        lineHeight: width * 0.025,
         textAlign: 'justify',
-        marginTop: 16,
-        paddingTop: 16,
+        marginTop: 14,
     },
     imageSection: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        paddingTop: 40,
+        paddingLeft: 10,
     },
     minerImage: {
-        width: width * 0.35,
-        height: width * 0.45,
+        width: width * 0.4,
+        height: width * 0.5,
     },
     buttonContainer: {
         alignItems: 'center',
@@ -235,13 +232,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     startButtonText: {
-        fontSize: width * 0.042,
-        fontWeight: '600',
+        fontSize: width * 0.012,
+        fontWeight: '400',
         color: Colors.White,
         marginRight: 8,
     },
     startArrow: {
-        fontSize: width * 0.042,
+        fontSize: width * 0.012,
         fontWeight: 'bold',
         color: Colors.White,
     },
