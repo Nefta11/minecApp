@@ -10,9 +10,9 @@ import {
     ScrollView,
 } from 'react-native';
 import Colors from '../../../utils/Colors';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
+import BackArrowButton from '../generals/BackArrowButton';
 
 // Replace this with your actual stack param list
 type RootStackParamList = {
@@ -41,13 +41,7 @@ const IntroduccionScreen: React.FC = () => {
                     showsVerticalScrollIndicator={false}
                 >
                     <View style={styles.header}>
-                        <TouchableOpacity
-                            style={styles.backButton}
-                            onPress={handleGoBack}
-                            activeOpacity={0.8}
-                        >
-                            <Icon name="arrow-back" size={60} color={Colors.Black} />
-                        </TouchableOpacity>
+                        <BackArrowButton onPress={handleGoBack} />
                     </View>
 
                     <View style={styles.mainContent}>
@@ -110,19 +104,6 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20,
         paddingTop: 30,
         paddingBottom: 18,
-    },
-    backButton: {
-        width: 70,
-        height: 70,
-        borderRadius: 35,
-        backgroundColor: Colors.PrimaryYellow,
-        justifyContent: 'center',
-        alignItems: 'center',
-        elevation: 3,
-        shadowColor: Colors.Black,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 4,
     },
     mainContent: {
         flex: 1,

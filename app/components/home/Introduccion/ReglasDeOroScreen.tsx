@@ -9,8 +9,8 @@ import {
     StatusBar,
 } from 'react-native';
 import Colors from '../../../utils/Colors';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
+import BackArrowButton from '../generals/BackArrowButton';
 
 const ReglasDeOroScreen: React.FC = () => {
     const navigation = useNavigation();
@@ -28,13 +28,7 @@ const ReglasDeOroScreen: React.FC = () => {
             <StatusBar backgroundColor={Colors.White} barStyle="dark-content" />
             <View style={styles.container}>
                 <View style={styles.header}>
-                    <TouchableOpacity
-                        style={styles.backButton}
-                        onPress={handleGoBack}
-                        activeOpacity={0.8}
-                    >
-                        <Icon name="arrow-back" size={40} color={Colors.Black} />
-                    </TouchableOpacity>
+                    <BackArrowButton onPress={handleGoBack} />
                     <Text style={styles.headerTitle}>Reglas de oro</Text>
                     <View style={styles.placeholder} />
                 </View>
