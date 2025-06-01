@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native';
+import { View, StyleSheet, Dimensions, TouchableOpacity, Image, Text } from 'react-native';
 
 const CentralCard: React.FC = () => {
     return (
         <TouchableOpacity style={styles.container} activeOpacity={0.8}>
+            <Text style={styles.title}>Modulo 2:{'\n'} Mantenimiento</Text>
             <View style={styles.imageContainer}>
                 <Image
                     source={require('../../assets/homeIcons/aprendiendo.png')}
@@ -37,6 +38,13 @@ const styles = StyleSheet.create({
     centralImage: {
         width: width * 0.5,
         height: width * 0.22,
+    },
+    title: {
+        fontSize: width * 0.025,
+        fontWeight: '600',
+        color: '#333',
+        marginBottom: 10,
+        textAlign: 'center',
     },
 });
 
