@@ -38,7 +38,7 @@ const ReglasDeOroScreen: React.FC = () => {
                             onPress={handleGoBack}
                             activeOpacity={0.8}
                         >
-                            <Icon name="arrow-back" size={60} color={Colors.Black} />
+                            <Icon name="arrow-back" size={40} color={Colors.Black} />
                         </TouchableOpacity>
                         <Text style={styles.headerTitle}>Reglas de oro</Text>
                         <View style={styles.placeholder} />
@@ -214,7 +214,7 @@ const styles = StyleSheet.create({
     buttonContainer: {
         alignItems: 'center',
         paddingHorizontal: 20,
-        marginTop: 30,
+        marginTop: 10, // antes: 30. Ahora el botón está más arriba
     },
     startButton: {
         flexDirection: 'row',
