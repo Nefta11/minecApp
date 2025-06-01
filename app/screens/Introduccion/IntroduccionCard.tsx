@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native';
-import Colors from '../../../utils/Colors';
+import Colors from '../../utils/Colors';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
 
 // Define your stack param list with the correct route names

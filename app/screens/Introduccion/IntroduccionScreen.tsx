@@ -9,10 +9,10 @@ import {
     StatusBar,
     ScrollView,
 } from 'react-native';
-import Colors from '../../../utils/Colors';
+import Colors from '../../utils/Colors';
 import { useNavigation } from '@react-navigation/native';
 import type { StackNavigationProp } from '@react-navigation/stack';
-import BackArrowButton from '../generals/BackArrowButton';
+import BackArrowButton from '../../components/home/generals/BackArrowButton';
 
 // Replace this with your actual stack param list
 type RootStackParamList = {

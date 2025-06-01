@@ -4,8 +4,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import WelcomeScreen from '../screens/WelcomeScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import HomeScreen from '../screens/HomeScreen';
-import IntroduccionScreen from '../components/home/Introduccion/IntroduccionScreen';
-import ReglasDeOroScreen from '../components/home/Introduccion/ReglasDeOroScreen';
+import IntroduccionScreen from '../screens/Introduccion/IntroduccionScreen';
+import ReglasDeOroScreen from '../screens/Introduccion/ReglasDeOroScreen';
 
 export type RootStackParamList = {
     Welcome: undefined;

@@ -8,9 +8,9 @@ import {
     Image,
     StatusBar,
 } from 'react-native';
-import Colors from '../../../utils/Colors';
+import Colors from '../../utils/Colors';
 import { useNavigation } from '@react-navigation/native';
-import BackArrowButton from '../generals/BackArrowButton';
+import BackArrowButton from '../../components/home/generals/BackArrowButton';
 
 const ReglasDeOroScreen: React.FC = () => {
     const navigation = useNavigation();
