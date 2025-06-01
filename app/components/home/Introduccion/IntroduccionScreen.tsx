@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
         marginTop: -80,
     },
     minerImage: {
-        width: width * 0.35,
+        width: width * 0.40,
         height: width * 0.45,
     },
     textSection: {
@@ -187,9 +187,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#4A4A4A',
-        paddingHorizontal: 12, // más pequeño
-        paddingVertical: 5, // más pequeño
-        borderRadius: 8, // más pequeño
+        paddingHorizontal: 12,
+        paddingVertical: 5,
+        borderRadius: 8,
         elevation: 3,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
@@ -199,13 +199,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     nextButtonText: {
-        fontSize: width * 0.025, // más pequeño
+        fontSize: width * 0.020, // más pequeño
         fontWeight: '600',
         color: Colors.White,
         marginRight: 4, // más pequeño
     },
     nextArrow: {
-        fontSize: width * 0.025, // más pequeño
+        fontSize: width * 0.020, // más pequeño
         fontWeight: 'bold',
         color: Colors.White,
     },
