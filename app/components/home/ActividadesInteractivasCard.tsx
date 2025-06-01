@@ -6,7 +6,7 @@ const ActividadesInteractivasCard: React.FC = () => {
     return (
         <TouchableOpacity style={styles.container} activeOpacity={0.8}>
             <View style={styles.content}>
-                <Text style={styles.title}>Actividades{'\n'}Interactivas</Text>
+                <Text style={styles.title}>Modulo 3:{'\n'}Operaciones de alto{'\n'}rendimiento</Text>
                 <View style={styles.iconWrapper}>
                     <Image
                         source={require('../../assets/homeIcons/interaccion.png')}
@@ -23,9 +23,9 @@ const { width } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: Colors.DavysGrey,
+        backgroundColor: Colors.CadetGrey,
         borderRadius: 12,
-        padding: 8,
+        padding: 10,
         width: width * 0.25,
         height: width * 0.17,
         justifyContent: 'center',
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     title: {
-        fontSize: width * 0.028,
+        fontSize: width * 0.020,
         fontWeight: '600',
         color: Colors.White,
         lineHeight: width * 0.032,
