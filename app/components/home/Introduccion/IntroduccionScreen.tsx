@@ -10,6 +10,7 @@ import {
     ScrollView,
 } from 'react-native';
 import Colors from '../../../utils/Colors';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const IntroduccionScreen: React.FC = () => {
     const handleGoBack = () => {
@@ -37,7 +38,7 @@ const IntroduccionScreen: React.FC = () => {
                             onPress={handleGoBack}
                             activeOpacity={0.8}
                         >
-                            <Text style={styles.backArrow}>←</Text>
+                            <Icon name="arrow-back" size={28} color={Colors.Black} />
                         </TouchableOpacity>
                     </View>
 
@@ -120,11 +121,6 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.2,
         shadowRadius: 4,
     },
-    backArrow: {
-        fontSize: 24,
-        fontWeight: 'bold',
-        color: Colors.Black,
-    },
     mainContent: {
         flex: 1,
         flexDirection: 'row',
@@ -185,31 +181,31 @@ const styles = StyleSheet.create({
     buttonContainer: {
         alignItems: 'center',
         paddingHorizontal: 20,
-        marginTop: 40,
+        marginTop: 10, 
     },
     nextButton: {
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#4A4A4A',
-        paddingHorizontal: 32,
-        paddingVertical: 16,
-        borderRadius: 12,
+        paddingHorizontal: 18, // antes 32
+        paddingVertical: 8, // antes 16
+        borderRadius: 10, // antes 12
         elevation: 3,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 4,
-        minWidth: 140,
+        minWidth: 90, // antes 140
         justifyContent: 'center',
     },
     nextButtonText: {
-        fontSize: width * 0.042,
+        fontSize: width * 0.032, // antes 0.042
         fontWeight: '600',
         color: Colors.White,
-        marginRight: 8,
+        marginRight: 6, // antes 8
     },
     nextArrow: {
-        fontSize: width * 0.042,
+        fontSize: width * 0.032, // antes 0.042
         fontWeight: 'bold',
         color: Colors.White,
     },
