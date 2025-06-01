@@ -5,12 +5,14 @@ import WelcomeScreen from '../screens/WelcomeScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import HomeScreen from '../screens/HomeScreen';
 import IntroduccionScreen from '../components/home/Introduccion/IntroduccionScreen';
+import ReglasDeOroScreen from '../components/home/Introduccion/ReglasDeOroScreen';
 
 export type RootStackParamList = {
     Welcome: undefined;
     Register: undefined;
     Home: undefined;
     IntroduccionScreen: undefined;
+    ReglasDeOroScreen: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -26,6 +28,7 @@ export default function StackApp() {
                 <Stack.Screen name="Register" component={RegisterScreen} />
                 <Stack.Screen name="Home" component={HomeScreen} />
                 <Stack.Screen name="IntroduccionScreen" component={IntroduccionScreen} />
+                <Stack.Screen name="ReglasDeOroScreen" component={ReglasDeOroScreen} />
             </Stack.Navigator>
         </NavigationContainer>
     );

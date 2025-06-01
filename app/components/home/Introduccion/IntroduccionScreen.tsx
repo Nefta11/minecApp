@@ -12,17 +12,24 @@ import {
 import Colors from '../../../utils/Colors';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
+import type { StackNavigationProp } from '@react-navigation/stack';
+
+// Replace this with your actual stack param list
+type RootStackParamList = {
+    IntroduccionScreen: undefined;
+    ReglasDeOroScreen: undefined;
+    // ...other screens
+};
 
 const IntroduccionScreen: React.FC = () => {
-    const navigation = useNavigation();
+    const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();
 
     const handleGoBack = () => {
         navigation.goBack();
     };
 
     const handleNext = () => {
-        // Lógica para ir a la siguiente pantalla
-        console.log('Siguiente');
+        navigation.navigate('ReglasDeOroScreen');
     };
 
     return (
