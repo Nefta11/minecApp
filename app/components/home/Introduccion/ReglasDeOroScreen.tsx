@@ -7,7 +7,6 @@ import {
     TouchableOpacity,
     Image,
     StatusBar,
-    ScrollView,
 } from 'react-native';
 import Colors from '../../../utils/Colors';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -27,86 +26,81 @@ const ReglasDeOroScreen: React.FC = () => {
         <>
             <StatusBar backgroundColor={Colors.White} barStyle="dark-content" />
             <View style={styles.container}>
-                <ScrollView
-                    contentContainerStyle={styles.scrollContent}
-                    showsVerticalScrollIndicator={false}
-                >
-                    {/* Header con botón de regreso */}
-                    <View style={styles.header}>
-                        <TouchableOpacity
-                            style={styles.backButton}
-                            onPress={handleGoBack}
-                            activeOpacity={0.8}
-                        >
-                            <Icon name="arrow-back" size={40} color={Colors.Black} />
-                        </TouchableOpacity>
-                        <Text style={styles.headerTitle}>Reglas de oro</Text>
-                        <View style={styles.placeholder} />
-                    </View>
+                {/* Header con botón de regreso */}
+                <View style={styles.header}>
+                    <TouchableOpacity
+                        style={styles.backButton}
+                        onPress={handleGoBack}
+                        activeOpacity={0.8}
+                    >
+                        <Icon name="arrow-back" size={40} color={Colors.Black} />
+                    </TouchableOpacity>
+                    <Text style={styles.headerTitle}>Reglas de oro</Text>
+                    <View style={styles.placeholder} />
+                </View>
 
-                    {/* Contenido principal */}
-                    <View style={styles.mainContent}>
-                        {/* Card amarilla con las reglas */}
-                        <View style={styles.rulesCard}>
-                            <View style={styles.ruleItem}>
-                                <Text style={styles.ruleText}>
-                                    <Text style={styles.ruleNumber}>1. </Text>
-                                    <Text style={styles.ruleTitle}>Puntualidad: </Text>
-                                    La puntualidad es clave para asegurar que el curso se desarrolle de manera fluida y eficaz.
-                                </Text>
-                            </View>
-
-                            <View style={styles.ruleItem}>
-                                <Text style={styles.ruleText}>
-                                    <Text style={styles.ruleNumber}>2. </Text>
-                                    <Text style={styles.ruleTitle}>Respeto: </Text>
-                                    Muestra respeto hacia los demás participantes y el material del curso.
-                                </Text>
-                            </View>
-
-                            <View style={styles.ruleItem}>
-                                <Text style={styles.ruleText}>
-                                    <Text style={styles.ruleNumber}>3. </Text>
-                                    <Text style={styles.ruleTitle}>Participación activa: </Text>
-                                    Participa en todas las actividades y discusiones para aprovechar mejor el curso
-                                </Text>
-                            </View>
-
-                            <View style={styles.ruleItem}>
-                                <Text style={styles.ruleText}>
-                                    <Text style={styles.ruleNumber}>4. </Text>
-                                    <Text style={styles.ruleTitle}>Romper Paradigmas: </Text>
-                                    Abre tu mente a nuevos enfoques.
-                                </Text>
-                            </View>
-
-                            <Text style={styles.additionalText}>
-                                No operes solo con base en la experiencia previa sigue las pautas del fabricante para garantizar una operación segura y eficiente.
+                {/* Contenido principal */}
+                <View style={styles.mainContent}>
+                    {/* Card amarilla con las reglas */}
+                    <View style={styles.rulesCard}>
+                        <View style={styles.ruleItem}>
+                            <Text style={styles.ruleText}>
+                                <Text style={styles.ruleNumber}>1. </Text>
+                                <Text style={styles.ruleTitle}>Puntualidad: </Text>
+                                La puntualidad es clave para asegurar que el curso se desarrolle de manera fluida y eficaz.
                             </Text>
                         </View>
 
-                        {/* Imagen del minero */}
-                        <View style={styles.imageSection}>
-                            <Image
-                                source={require('../../../assets/regla-de-oro1.png')}
-                                style={styles.minerImage}
-                                resizeMode="contain"
-                            />
+                        <View style={styles.ruleItem}>
+                            <Text style={styles.ruleText}>
+                                <Text style={styles.ruleNumber}>2. </Text>
+                                <Text style={styles.ruleTitle}>Respeto: </Text>
+                                Muestra respeto hacia los demás participantes y el material del curso.
+                            </Text>
                         </View>
+
+                        <View style={styles.ruleItem}>
+                            <Text style={styles.ruleText}>
+                                <Text style={styles.ruleNumber}>3. </Text>
+                                <Text style={styles.ruleTitle}>Participación activa: </Text>
+                                Participa en todas las actividades y discusiones para aprovechar mejor el curso
+                            </Text>
+                        </View>
+
+                        <View style={styles.ruleItem}>
+                            <Text style={styles.ruleText}>
+                                <Text style={styles.ruleNumber}>4. </Text>
+                                <Text style={styles.ruleTitle}>Romper Paradigmas: </Text>
+                                Abre tu mente a nuevos enfoques.
+                            </Text>
+                        </View>
+
+                        <Text style={styles.additionalText}>
+                            No operes solo con base en la experiencia previa sigue las pautas del fabricante para garantizar una operación segura y eficiente.
+                        </Text>
                     </View>
 
-                    {/* Botón Vamos a comenzar */}
-                    <View style={styles.buttonContainer}>
-                        <TouchableOpacity
-                            style={styles.startButton}
-                            onPress={handleStartCourse}
-                            activeOpacity={0.8}
-                        >
-                            <Text style={styles.startButtonText}>Vamos a comenzar</Text>
-                            <Text style={styles.startArrow}>→</Text>
-                        </TouchableOpacity>
+                    {/* Imagen del minero */}
+                    <View style={styles.imageSection}>
+                        <Image
+                            source={require('../../../assets/regla-de-oro1.png')}
+                            style={styles.minerImage}
+                            resizeMode="contain"
+                        />
                     </View>
-                </ScrollView>
+                </View>
+
+                {/* Botón Vamos a comenzar */}
+                <View style={styles.buttonContainer}>
+                    <TouchableOpacity
+                        style={styles.startButton}
+                        onPress={handleStartCourse}
+                        activeOpacity={0.8}
+                    >
+                        <Text style={styles.startButtonText}>Vamos a comenzar</Text>
+                        <Text style={styles.startArrow}>→</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
         </>
     );
@@ -118,10 +112,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Colors.White,
-    },
-    scrollContent: {
-        flexGrow: 1,
-        paddingBottom: 30,
     },
     header: {
         flexDirection: 'row',
@@ -214,7 +204,8 @@ const styles = StyleSheet.create({
     buttonContainer: {
         alignItems: 'center',
         paddingHorizontal: 20,
-        marginTop: 10, // antes: 30. Ahora el botón está más arriba
+        marginTop: 0, // Subido al máximo
+        marginBottom: 10, // Un poco de espacio inferior
     },
     startButton: {
         flexDirection: 'row',
