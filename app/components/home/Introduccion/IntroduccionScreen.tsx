@@ -11,11 +11,13 @@ import {
 } from 'react-native';
 import Colors from '../../../utils/Colors';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { useNavigation } from '@react-navigation/native';
 
 const IntroduccionScreen: React.FC = () => {
+    const navigation = useNavigation();
+
     const handleGoBack = () => {
-        // Lógica para regresar a la pantalla anterior
-        console.log('Regresar');
+        navigation.goBack();
     };
 
     const handleNext = () => {
