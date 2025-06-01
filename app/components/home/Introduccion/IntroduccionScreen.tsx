@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
         marginTop: -100,
     },
     textCard: {
-        backgroundColor: '#9DB4C4',
+        backgroundColor: Colors.CadetGrey,
         borderRadius: 20,
         padding: 35,
         elevation: 2,
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     nextButton: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#4A4A4A',
+        backgroundColor: Colors.CadetGrey,
         paddingHorizontal: 20,
         paddingVertical: 15,
         borderRadius: 10,
