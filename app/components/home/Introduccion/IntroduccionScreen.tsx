@@ -38,7 +38,7 @@ const IntroduccionScreen: React.FC = () => {
                             onPress={handleGoBack}
                             activeOpacity={0.8}
                         >
-                            <Icon name="arrow-back" size={28} color={Colors.Black} />
+                            <Icon name="arrow-back" size={40} color={Colors.Black} />
                         </TouchableOpacity>
                     </View>
 
@@ -47,7 +47,7 @@ const IntroduccionScreen: React.FC = () => {
                         {/* Imagen del minero */}
                         <View style={styles.imageSection}>
                             <Image
-                                source={require('../../../assets/homeIcons/minero1.png')}
+                                source={require('../../../assets/minero2.png')}
                                 style={styles.minerImage}
                                 resizeMode="contain"
                             />
@@ -105,13 +105,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: 20,
-        paddingTop: 20,
-        paddingBottom: 10,
+        paddingTop: 30, // más espacio arriba
+        paddingBottom: 18, // más espacio abajo
     },
     backButton: {
-        width: 50,
-        height: 50,
-        borderRadius: 25,
+        width: 70, // antes 50
+        height: 70, // antes 50
+        borderRadius: 35, // antes 25
         backgroundColor: Colors.PrimaryYellow,
         justifyContent: 'center',
         alignItems: 'center',
@@ -145,7 +145,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
     },
     sectionTitle: {
-        fontSize: width * 0.050,
+        fontSize: width * 0.035,
         fontWeight: '700',
         color: Colors.Black,
         textAlign: 'center',
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     textCard: {
         backgroundColor: '#9DB4C4',
         borderRadius: 20,
-        padding: 32,
+        padding: 35,
         elevation: 2,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
@@ -163,16 +163,16 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
     },
     welcomeTitle: {
-        fontSize: width * 0.035,
+        fontSize: width * 0.030,
         fontWeight: '600',
         color: Colors.White,
-        marginBottom: 20,
+        marginBottom: 15,
         textAlign: 'center',
         lineHeight: width * 0.040,
     },
     description: {
-        fontSize: width * 0.025,
-        lineHeight: width * 0.035,
+        fontSize: width * 0.024,
+        lineHeight: width * 0.034,
         color: Colors.White,
         textAlign: 'justify',
         fontWeight: '400',
@@ -181,31 +181,31 @@ const styles = StyleSheet.create({
     buttonContainer: {
         alignItems: 'center',
         paddingHorizontal: 20,
-        marginTop: 10, 
+        marginTop: 10,
     },
     nextButton: {
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#4A4A4A',
-        paddingHorizontal: 18, // antes 32
-        paddingVertical: 8, // antes 16
-        borderRadius: 10, // antes 12
+        paddingHorizontal: 12, // más pequeño
+        paddingVertical: 5, // más pequeño
+        borderRadius: 8, // más pequeño
         elevation: 3,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 4,
-        minWidth: 90, // antes 140
+        minWidth: 60, // más pequeño
         justifyContent: 'center',
     },
     nextButtonText: {
-        fontSize: width * 0.032, // antes 0.042
+        fontSize: width * 0.025, // más pequeño
         fontWeight: '600',
         color: Colors.White,
-        marginRight: 6, // antes 8
+        marginRight: 4, // más pequeño
     },
     nextArrow: {
-        fontSize: width * 0.032, // antes 0.042
+        fontSize: width * 0.025, // más pequeño
         fontWeight: 'bold',
         color: Colors.White,
     },
