@@ -26,7 +26,6 @@ const ReglasDeOroScreen: React.FC = () => {
         <>
             <StatusBar backgroundColor={Colors.White} barStyle="dark-content" />
             <View style={styles.container}>
-                {/* Header con botón de regreso */}
                 <View style={styles.header}>
                     <TouchableOpacity
                         style={styles.backButton}
@@ -39,9 +38,7 @@ const ReglasDeOroScreen: React.FC = () => {
                     <View style={styles.placeholder} />
                 </View>
 
-                {/* Contenido principal */}
                 <View style={styles.mainContent}>
-                    {/* Card amarilla con las reglas */}
                     <View style={styles.rulesCard}>
                         <View style={styles.ruleItem}>
                             <Text style={styles.ruleText}>
@@ -80,7 +77,6 @@ const ReglasDeOroScreen: React.FC = () => {
                         </Text>
                     </View>
 
-                    {/* Imagen del minero */}
                     <View style={styles.imageSection}>
                         <Image
                             source={require('../../../assets/regla-de-oro1.png')}
@@ -90,7 +86,6 @@ const ReglasDeOroScreen: React.FC = () => {
                     </View>
                 </View>
 
-                {/* Botón Vamos a comenzar */}
                 <View style={styles.buttonContainer}>
                     <TouchableOpacity
                         style={styles.startButton}
