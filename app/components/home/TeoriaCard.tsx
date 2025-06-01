@@ -6,7 +6,7 @@ const TeoriaCard: React.FC = () => {
     return (
         <TouchableOpacity style={styles.container} activeOpacity={0.8}>
             <View style={styles.content}>
-                <Text style={styles.title}>Teoria</Text>
+                <Text style={styles.title}>Modulo 1:{'\n'}Seguridad{'\n'}Proactiva</Text>
                 <View style={styles.iconWrapper}>
                     <Image
                         source={require('../../assets/homeIcons/teoria1.png')}
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#9DB4C4',
         borderRadius: 12,
-        padding: 8,
+        padding: 10,
         width: width * 0.25,
         height: width * 0.17,
         justifyContent: 'center',
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     title: {
-        fontSize: width * 0.028,
+        fontSize: width * 0.025,
         fontWeight: '600',
         color: Colors.White,
         flex: 1,

@@ -6,13 +6,13 @@ const ExportarResultadosCard: React.FC = () => {
     return (
         <TouchableOpacity style={styles.container} activeOpacity={0.8}>
             <View style={styles.content}>
-                <Text style={styles.title}>Exportar{'\n'}resultados</Text>
+                <Text style={styles.title}>Actividades{'\n'}Interactivas</Text>
                 <View style={styles.iconWrapper}>
-                  <Image
-                      source={require('../../assets/homeIcons/otg.png')}
-                      style={styles.cardImage}
-                      resizeMode="contain"
-                  />
+                    <Image
+                        source={require('../../assets/homeIcons/interaccion.png')}
+                        style={styles.cardImage}
+                        resizeMode="contain"
+                    />
                 </View>
             </View>
         </TouchableOpacity>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#4A4A4A',
         borderRadius: 12,
-        padding: 8,
+        padding: 10,
         width: width * 0.25,
         height: width * 0.17,
         justifyContent: 'center',
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     },
     title: {
-        fontSize: width * 0.028,
+        fontSize: width * 0.025,
         fontWeight: '600',
         color: Colors.White,
         lineHeight: width * 0.032,
