@@ -89,7 +89,7 @@ const { width, height } = Dimensions.get('window');
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Colors.White,
+        backgroundColor: Colors.Ivory,
     },
     scrollContent: {
         flexGrow: 1,
@@ -175,16 +175,15 @@ const styles = StyleSheet.create({
     buttonContainer: {
         alignItems: 'center',
         paddingHorizontal: 20,
-        marginTop: 10,
     },
     nextButton: {
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#4A4A4A',
-        paddingHorizontal: 12,
-        paddingVertical: 5,
-        borderRadius: 8,
-        elevation: 3,
+        paddingHorizontal: 20,
+        paddingVertical: 15,
+        borderRadius: 10,
+        elevation: 5,
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
@@ -193,13 +192,13 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     nextButtonText: {
-        fontSize: width * 0.020,
-        fontWeight: '600',
+        fontSize: width * 0.015,
+        fontWeight: '400',
         color: Colors.White,
         marginRight: 4,
     },
     nextArrow: {
-        fontSize: width * 0.020,
+        fontSize: width * 0.015,
         fontWeight: 'bold',
         color: Colors.White,
     },
